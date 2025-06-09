@@ -1,0 +1,390 @@
+/* Root Variables */
+:root {
+  --font-size: 12px;
+  --font-weight: 600;
+  --font-family:  "JetBrainsMono NFP" ,"Iosevka NF Medium", "Pretendard", "Segoe Fluent Icons", sans-serif;
+
+  --bg-color: hsl(0, 0%, 8%);
+  --border-radius: 12px;
+  --border-color: hsla(0, 0%, 100%, 0.4);
+  --text-color-normal: hsla(0, 0%, 100%, 0.6);
+  --text-color-hover: hsla(0, 0%, 100%, 0.9);
+  --text-color-disabled: hsla(0, 0%, 100%, 0.2);
+  --text: #FFFFFF;
+  --text-empty: #282828;
+  --text-populated: #A0A0A0;
+
+  --media-btn-hover: hsl(0, 0%, 78%);
+
+  --komorebi-workspace-width: 100%;
+  --komorebi-workspace-height: 16px;
+  --komorebi-workspace-bg-normal: hsla(0, 0%, 100%, 0.2);
+  --komorebi-workspace-bg-hover: hsla(0, 0%, 100%, 0.6);
+  --komorebi-workspace-bg-active: hsla(0, 0%, 100%, 0.7);
+  --komorebi-workspace-bg-populated: hsla(0, 0%, 100%, 0.4);
+  --komorebi-workspace-color-normal: hsla(0, 0%, 100%, 0.6);
+  --komorebi-workspace-color-hover: hsla(0, 0%, 100%, 0.9);
+  --komorebi-workspace-color-active: hsla(0, 0%, 100%, 0.9);
+  --komorebi-workspace-color-populated: hsla(0, 0%, 100%, 0.9);
+  --bg: #000 rgba(0,0,0,0.7);
+  --main: #9ba2a7;
+  --wallpaper: url("C:/Users/boibl/AppData/Local/Temp/waves_crashing_waves_on_rocks.jpg");
+}
+
+
+/* Global Styles */
+* {
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 0;
+}
+
+/* Yasb Bar */
+.yasb-bar {
+  padding: 0;
+  margin: 0;
+  background: var(--bg);
+  
+}
+.yasb-bar.top {
+  padding-left: 9px;
+  padding-right: 6px;
+}
+.yasb-bar.bottom {
+  padding-right: 6px;
+}
+.yasb-bar * {
+  /*color: hsla(0, 0%, 100%, 0.6);*/
+  color: #FFFFFF;
+  
+}
+.icon {
+  margin-right: 8px;
+}
+
+
+/* Komorebi Workspaces */
+.komorebi-workspaces .ws-btn {
+    border: none;
+    color: var(--text-empty);
+    margin: 0 1px 0 1px;
+    height: 28px;
+    padding: 0 6px;
+}
+
+.komorebi-workspaces .ws-btn.populated {
+    color: var(--text-populated);
+}
+
+.komorebi-workspaces .ws-btn.active {
+    color: var(--text);
+    font-weight: 900;
+}
+
+/* Apps Widget */
+.apps-widget {
+  padding-right: 16px;
+}
+.apps-widget .widget-container {
+  border-left: 1px solid var(--border-color);
+}
+.apps-widget .widget-container .label {
+  padding-left: 20px;
+}
+.app-button .widget-container {
+  background-color: #0c0c0c;
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+}
+.app-button .widget-container .label {
+  padding: 0 16px;
+}
+.app-button .widget-container .label.alt {}
+.app-button .widget-container .icon {}
+
+/* Taskbar Widget */
+.taskbar-widget {
+  padding-left: 6px;
+  padding-right: 10px;
+  margin: 6px 0;
+  border-radius: 7px;
+  background: hsla(0, 0%, 100%, 0.05);
+  border: 1px solid hsla(0, 0%, 100%, 0.1)
+}
+.taskbar-widget:hover {
+  background: hsla(0, 0%, 100%, 0.08);
+  border: 1px solid hsla(0, 0%, 100%, 0.14)
+}
+.taskbar-widget .app-icon {
+  padding:0 6px;
+}
+
+/* Volume Widget */
+.volume-widget {
+  padding-left: 12px;
+  padding-right: 5px
+}
+.volume-widget .label {
+  padding-right: 0px;
+  color: hsla(0, 0%, 100%, 0.6);
+}
+.volume-widget .label:hover {
+  color: hsla(0, 0%, 100%, 0.6);
+}
+
+/* Active Window Widget */
+.active-window-widget {
+  margin: 6px 0;
+  padding: 0px 14px;
+  
+  border-radius: 12px;
+}
+.active-window-widget .label {
+  font-size: 11px;
+  
+}
+.active-window-widget .label:hover {
+  
+}
+
+/* Media Widget */
+.media-widget {
+  margin: 5px 0;
+  padding-left: 0px;
+  padding-right: 4px;
+  
+}
+.media-widget .widget-container {
+}
+.media-widget .label {
+}
+.media-widget .label:hover {
+  color: var(--text-color-hover);
+}
+.media-widget .label.alt {}
+.media-widget .btn {
+  margin: 3px 0;
+  padding: 0 4px;
+  
+  
+}
+.media-widget .btn:hover {
+  background: hsla(0, 0%, 100%, 0.25);
+}
+.media-widget .btn.play {
+}
+.media-widget .btn.prev {
+  margin-right: 2px;
+  margin-left: 4px;
+}
+.media-widget .btn.next {
+  margin-left:2px;
+}
+.media-widget .btn.disabled,.media-widget .btn.disabled:hover {
+  background: hsla(0, 0%, 100%, 0.03);
+}
+
+/* Clock Widget */
+.clock-widget {
+  margin: 6px 0;
+  padding: 0 12px;
+  border-radius: 8px;
+  color: hsla(0, 0%, 100%, 0.6);
+}
+.clock-widget:hover {
+
+}
+
+.clock-widget .widget-container {}
+.clock-widget .widget-container .label {
+  color: #FFFFFF
+}
+.clock-widget .widget-container .label:hover {
+  color: #FFFFFF;
+}
+
+/* Traffic Widget */
+.traffic-widget {
+  padding-left: 7px;
+  padding-right: 16px;
+}
+.traffic-widget .widget-container {}
+.traffic-widget .widget-container .label {
+}
+.traffic-widget .widget-container .label.alt {}
+
+/* Weather Widget */
+.weather-widget {
+  margin-right: 8px;
+}
+.weather-widget .widget-container {}
+.weather-widget .label {
+  color: var(--text-color-normal);
+}
+.weather-widget .min, .weather-widget .max, .weather-widget .humidity {
+  background: hsla(0, 0%, 100%, 0.14);
+  border-radius: 6px;
+}
+.weather-widget .label {
+  border-radius: 8px;
+  color: #d4d4d4
+}
+.weather-widget .label:hover {
+  color: var(--text-color-hover);
+}
+.weather-widget .icon {
+}
+.weather-widget .icon.cloudyDay {}
+.weather-widget .icon.cloudyNight {}
+.weather-widget .icon.rainyDay {}
+.weather-widget .icon.rainyNight {}
+.weather-widget .icon.snowyIcyDay {}
+.weather-widget .icon.snowyIcyNight {}
+.weather-widget .icon.blizzard {}
+.weather-widget .icon.default {}
+
+
+.wallpapers-widget {
+  padding: 0 7px 0 7px;
+}
+.wallpapers-gallery-window {
+  background-color: rgba(85, 42, 240, 0.01);
+  border: 0;
+  margin: 0;
+}
+.wallpapers-gallery-buttons {
+  background-color:rgba(255, 255, 255, 0);
+  color:var(--text);
+  border: none;
+  font-size: 16px;
+  padding: 8px 0;
+  border-radius: 8px;
+  margin:0 8px 8px 8px;
+  width: 600px;
+}
+.wallpapers-gallery-buttons:hover {
+  background-color:rgba(255, 255, 255, 0.1)
+}
+.wallpapers-gallery-image {
+  border: 4px solid transparent;
+  border-radius: 10px;
+
+}
+.wallpapers-gallery-image:hover {
+  border: 4px solid var(--sapphire);
+}
+.wallpapers-gallery-image.focused {
+  border: 4px solid var(--sapphire);
+
+}
+
+.systray {
+  background: transparent;
+  border: None;
+  margin: 0;
+}
+
+.systray .unpinned-container {
+  background: transparent;
+  border-radius: 8px;
+}
+
+.systray .pinned-container {
+  background: transparent;
+}
+
+.systray .pinned-container[forceshow=true] {
+  background: red;
+}
+
+.systray .button {
+  border-radius: 4px;
+  padding: 2px 2px;
+}
+
+.systray .button:hover {
+  background: #727272;
+}
+
+.systray .button[dragging=true] {
+  background: orange;
+  border-color: #FF8800;
+}
+
+.systray .unpinned-visibility-btn {
+  border-radius: 4px;
+  height: 20px;
+  width: 16px;
+}
+
+.systray .unpinned-visibility-btn:checked {
+  background: transparent;
+}
+
+.systray .unpinned-visibility-btn:hover {
+  border: 0px solid #AAAAAA;
+  border-radius: 4px;
+  border-color: #AAAAAA;
+}
+
+.bluetooth-widget {}
+.bluetooth-widget .widget-container {}
+.bluetooth-widget .label {}
+.bluetooth-widget .label.alt {}
+.bluetooth-widget .icon {}
+
+.uptime {
+    font-size: 12px;
+    margin: 0 0 4px;
+}
+.power-menu-widget .label {
+    font-size: 14px;
+    margin-left: 0px;
+}
+.power-menu-popup {
+    background-color: rgba(2, 2, 2, 0.466);
+    border-radius: 12px;
+    border: 0px solid rgb(0, 0, 0);
+}
+.power-menu-popup .button {
+    padding: 0;
+    width: 140px;
+    height: 110px;
+    border-radius: 10px;
+    background-color: rgba(66, 66, 68, 0.247);
+    color: white;
+    border: 0px solid rgba(255, 255, 255, 0.1);
+    margin: 4px;
+}
+
+
+.power-menu-popup .button.hover {
+    background-color: rgb(64, 64, 68);
+    border: 0px solid rgb(26, 26, 27);
+}
+.power-menu-popup .button .label {
+    margin-bottom: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.425);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.power-menu-popup .button .icon {
+    font-size: 40px;
+    padding-top: 19px;
+    color: rgba(255, 255, 255, 0.25);
+}
+.power-menu-popup .button.cancel .icon {
+    color: rgba(139, 201, 243, 0.568);
+}
+.power-menu-popup .button.cancel .label {
+    color: rgba(139, 201, 243, 0.568);
+}
+.power-menu-popup .button.shutdown .icon {
+    color: rgba(255, 9, 9, 0.685);
+}
+.power-menu-popup .button.shutdown .label {
+    color: rgba(255, 9, 9, 0.685);
+}
